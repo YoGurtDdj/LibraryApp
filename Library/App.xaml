@@ -1,0 +1,137 @@
+﻿<Application x:Class="Library.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Library"
+             xmlns:viewModel="clr-namespace:Library.ViewModel"
+             xmlns:view="clr-namespace:Library.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Path x:Key="a"
+              Data="M7.5 1.8C7.00272 1.8 6.52581 1.98964 6.17418 2.32721C5.82254 2.66477 5.625 3.12261 5.625 3.6H9.375C9.375 3.12261 9.17746 2.66477 8.82582 2.32721C8.47419 1.98964 7.99728 1.8 7.5 1.8ZM5.01937 0.9C5.68031 0.3402 6.54938 0 7.5 0C8.45063 0 9.31875 0.3402 9.98063 0.9H13.125C13.6223 0.9 14.0992 1.08964 14.4508 1.42721C14.8025 1.76477 15 2.22261 15 2.7V16.2C15 16.6774 14.8025 17.1352 14.4508 17.4728C14.0992 17.8104 13.6223 18 13.125 18H1.875C1.37772 18 0.900805 17.8104 0.549175 17.4728C0.197544 17.1352 0 16.6774 0 16.2V2.7C0 2.22261 0.197544 1.76477 0.549175 1.42721C0.900805 1.08964 1.37772 0.9 1.875 0.9H5.01937ZM3.86813 2.7H1.875V16.2H13.125V2.7H11.1319C11.2087 2.988 11.25 3.2895 11.25 3.6V4.5C11.25 4.73869 11.1512 4.96761 10.9754 5.1364C10.7996 5.30518 10.5611 5.4 10.3125 5.4H4.6875C4.43886 5.4 4.2004 5.30518 4.02459 5.1364C3.84877 4.96761 3.75 4.73869 3.75 4.5V3.6C3.75 3.2895 3.79125 2.988 3.86813 2.7ZM3.75 8.1C3.75 7.8613 3.84877 7.63239 4.02459 7.4636C4.2004 7.29482 4.43886 7.2 4.6875 7.2H10.3125C10.5611 7.2 10.7996 7.29482 10.9754 7.4636C11.1512 7.63239 11.25 7.8613 11.25 8.1C11.25 8.33869 11.1512 8.56761 10.9754 8.7364C10.7996 8.90518 10.5611 9 10.3125 9H4.6875C4.43886 9 4.2004 8.90518 4.02459 8.7364C3.84877 8.56761 3.75 8.33869 3.75 8.1ZM3.75 11.7C3.75 11.4613 3.84877 11.2324 4.02459 11.0636C4.2004 10.8948 4.43886 10.8 4.6875 10.8H7.5C7.74864 10.8 7.9871 10.8948 8.16291 11.0636C8.33873 11.2324 8.4375 11.4613 8.4375 11.7C8.4375 11.9387 8.33873 12.1676 8.16291 12.3364C7.9871 12.5052 7.74864 12.6 7.5 12.6H4.6875C4.43886 12.6 4.2004 12.5052 4.02459 12.3364C3.84877 12.1676 3.75 11.9387 3.75 11.7Z" />
+        <Path x:Key="b" Data="M3.825 19L5.45 11.975L0 7.25L7.2 6.625L10 0L12.8 6.625L20 7.25L14.55 11.975L16.175 19L10 15.275L3.825 19Z"/>
+        <Path x:Key="c" Data="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z"/>
+        <Path x:Key="d" Data="M8 17.5C8 17.8978 8.15804 18.2794 8.43934 18.5607C8.72064 18.842 9.10218 19 9.5 19C9.89782 19 10.2794 18.842 10.5607 18.5607C10.842 18.2794 11 17.8978 11 17.5V11H17.5C17.8978 11 18.2794 10.842 18.5607 10.5607C18.842 10.2794 19 9.89782 19 9.5C19 9.10218 18.842 8.72064 18.5607 8.43934C18.2794 8.15804 17.8978 8 17.5 8H11V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V8H1.5C1.10218 8 0.720644 8.15804 0.43934 8.43934C0.158035 8.72064 0 9.10218 0 9.5C0 9.89782 0.158035 10.2794 0.43934 10.5607C0.720644 10.842 1.10218 11 1.5 11H8V17.5Z"/>
+
+        <Style x:Key="icon" TargetType="{x:Type Path}">
+            <Setter Property="Stretch" Value="Uniform"/>
+            <Setter Property="Data" Value="{Binding Data, Source={StaticResource a}}"/>
+        </Style>
+        <Style x:Key="fav" TargetType="{x:Type Path}">
+            <Setter Property="Stretch" Value="Uniform"/>
+            <Setter Property="Data" Value="{Binding Data, Source={StaticResource b}}"/>
+        </Style>
+        <Style x:Key="del" TargetType="{x:Type Path}">
+            <Setter Property="Stretch" Value="Uniform"/>
+            <Setter Property="Data" Value="{Binding Data, Source={StaticResource c}}"/>
+        </Style>
+        <Style x:Key="add" TargetType="{x:Type Path}">
+            <Setter Property="Stretch" Value="Uniform"/>
+            <Setter Property="Data" Value="{Binding Data, Source={StaticResource d}}"/>
+        </Style>
+            
+        <Style BasedOn="{StaticResource {x:Type ToggleButton}}" x:Key="radiobut" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="15" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter x:Name="content" Content="{TemplateBinding Content}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="#FF1E1E1E"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF1E1E1E"/>
+                                <Setter TargetName="content" Property="TextBlock.Foreground" Value="#393939"/>
+                                <Setter TargetName="content" Property="TextElement.Foreground" Value="#393939"/>
+                                <Setter TargetName="content" Property="Path.Fill" Value="#393939"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF2C2C2C"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF2C2C2C"/>
+                                <Setter TargetName="content" Property="TextBlock.Foreground" Value="White"/>
+                                <Setter TargetName="content" Property="TextElement.Foreground" Value="White"/>
+                                <Setter TargetName="content" Property="Path.Fill" Value="White"/>
+                            </Trigger>
+                            
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Width" Value="320"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="FontFamily" Value="Fonts/Inder.ttf#Inder"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+
+
+        <Style TargetType="Button" x:Key="but">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="15" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Button.HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Button.HorizontalAlignment" Value="Left"/>
+            <Setter Property="Button.VerticalAlignment" Value="Top"/>
+            <Setter Property="Button.Width" Value="320"/>
+            <Setter Property="Button.Height" Value="50"/>
+            <Setter Property="Button.FontFamily" Value="Fonts/Inder.ttf#Inder"/>
+            <Setter Property="Button.Foreground" Value="White"/>
+            <Setter Property="Button.FontSize" Value="24"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Style.Resources>
+            
+        </Style>
+
+        <Style TargetType="Button" x:Key="innerBut">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="30">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#4CFFFFFF"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#7FFFFFFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <DataTemplate DataType="{x:Type viewModel:MyFilesViewModel}">
+            <view:MyFilesView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:BookmarksViewModel}">
+            <view:BookmarksView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:FavouritesViewModel}">
+            <view:FavouritesView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:RegistrationViewModel}">
+            <view:RegistrationView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:AutorizationViewModel}">
+            <view:AutorizationView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:AccountViewModel}">
+            <view:AccountView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:NoAccountViewModel}">
+            <view:NoAccountView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

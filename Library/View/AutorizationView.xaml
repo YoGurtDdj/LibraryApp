@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Library.View.AutorizationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Library.View"
+             xmlns:viewModel="clr-namespace:Library.ViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" Height="830">
+    <UserControl.DataContext>
+        <viewModel:MainViewModel/>
+    </UserControl.DataContext>
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Height="830">
+        <StackPanel Margin="0,0,0,0" Width="800" Height="830">
+            <Image Source="C:\Users\islam\source\repos\RS\Library\Library\View\user.png" Height="270" Width="270"/>
+            <Label Content="Login:" Foreground="White" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="24" FontFamily="Inder"/>
+            <TextBox Padding="5" Name="Login" Width="320" Margin="0,10,0,10" Height="50" FontSize="20" VerticalContentAlignment="Center" FontFamily="Inder" Background="{x:Null}" Foreground="White" BorderBrush="#FF393939" SelectionBrush="White">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Label Content="Password:" Foreground="White" HorizontalAlignment="Center" FontSize="24" FontFamily="Inder"/>
+            <PasswordBox Name="Password" Padding="5" Width="320" Margin="0,10,0,10" Height="50" FontSize="20" VerticalContentAlignment="Center" FontFamily="Inder" Foreground="White" SelectionBrush="White" Background="{x:Null}" BorderBrush="#FF393939">
+                <PasswordBox.Template>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border CornerRadius="15" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </PasswordBox.Template>
+            </PasswordBox>
+
+
+            <Button Width="320" Height="50" Content="Войти" x:Name="Registration" Background="#FF393939" BorderThickness="0" Foreground="White" FontSize="24" FontFamily="Inder" Margin="0,20,0,0" Click="Registration_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Width="200" Height="30" Content="Нет аккаунта?" Background="#FF1E1E1E" BorderThickness="0" Foreground="White" FontFamily="Inder" FontSize="18" Margin="0,9,0,0" Command="{Binding DataContext.RegistrationViewCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}">
+
+            </Button>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
