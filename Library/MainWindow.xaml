@@ -51,18 +51,6 @@
                             <TextBlock Margin="15,0,0,0" Foreground="{Binding FavouritesBut}"><Run Text="Favourites"/></TextBlock>
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Background="#FF1E1E1E" BorderBrush="#FF1E1E1E" Style="{StaticResource radiobut}" Margin="5,290,0,0">
-                        <StackPanel Orientation="Horizontal">
-                            <Path Style="{StaticResource icon}" Fill="#393939" Margin="20,0,0,0"/>
-                            <TextBlock Margin="15,0,0,0" Foreground="#FF393939" Text="Settings"/>
-                        </StackPanel>
-                    </RadioButton>
-                    <RadioButton Background="#FF1E1E1E" BorderBrush="#FF1E1E1E" Style="{StaticResource radiobut}" Margin="5,0,0,0" Command="{Binding RegistrationViewCommand}">
-                        <StackPanel Orientation="Horizontal">
-                            <Path Style="{StaticResource icon}" Fill="{Binding AccountBut}" Margin="20,0,0,0"/>
-                            <TextBlock Margin="15,0,0,0" Foreground="{Binding AccountBut}"><Run Text="Account"/></TextBlock>
-                        </StackPanel>
-                    </RadioButton>
                 </StackPanel>
             </Border>
 

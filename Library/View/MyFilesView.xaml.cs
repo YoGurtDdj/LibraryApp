@@ -3,8 +3,6 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using MySql.Data.MySqlClient;
-using MySql.Data;
 using static System.Net.Mime.MediaTypeNames;
 using Microsoft.Win32;
 using System.Windows.Data;
@@ -87,27 +85,6 @@ namespace Library.View
         private void FavButClick(string fileName, RoutedEventArgs e)
         {
             
-            string connStr = "server=localhost;user=root;database=Library;port=3307;password=1234";
-            MySqlConnection conn = new MySqlConnection(connStr);
-            try
-            {
-                conn.Open();
-
-                string sql = "INSERT INTO favourites(user_id, fileName) VALUES (@content2, @content)";
-
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@content", fileName);
-                cmd.Parameters.AddWithValue("@content2", User.UserID);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"failed! {ex}");
-            }
-
-            conn.Close();
-            Console.WriteLine("Done.");
-            e.Handled = true;
         }
         private Button CreateStaticButton()
         {

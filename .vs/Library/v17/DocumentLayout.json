@@ -1,12 +1,100 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\islam\\source\\repos\\RS\\Library\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|c:\\users\\islam\\source\\repos\\rs\\library\\library\\view\\myfilesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|solutionrelative:library\\view\\myfilesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|c:\\users\\islam\\source\\repos\\rs\\library\\library\\view\\myfilesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|solutionrelative:library\\view\\myfilesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|c:\\users\\islam\\source\\repos\\rs\\library\\library\\documentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|solutionrelative:library\\documentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|c:\\users\\islam\\source\\repos\\rs\\library\\library\\documentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|solutionrelative:library\\documentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|c:\\users\\islam\\source\\repos\\rs\\library\\library\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{683C4D33-AE12-4726-B030-9F4D8EDE91C2}|Library\\Library.csproj|solutionrelative:library\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyFilesView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\View\\MyFilesView.xaml.cs",
+              "RelativeDocumentMoniker": "Library\\View\\MyFilesView.xaml.cs",
+              "ToolTip": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\View\\MyFilesView.xaml.cs",
+              "RelativeToolTip": "Library\\View\\MyFilesView.xaml.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwGwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T17:56:38.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyFilesView.xaml",
+              "DocumentMoniker": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\View\\MyFilesView.xaml",
+              "RelativeDocumentMoniker": "Library\\View\\MyFilesView.xaml",
+              "ToolTip": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\View\\MyFilesView.xaml",
+              "RelativeToolTip": "Library\\View\\MyFilesView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-16T17:56:37.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DocumentWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\DocumentWindow.xaml",
+              "RelativeDocumentMoniker": "Library\\DocumentWindow.xaml",
+              "ToolTip": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\DocumentWindow.xaml",
+              "RelativeToolTip": "Library\\DocumentWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-14T15:30:33.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DocumentWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\DocumentWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Library\\DocumentWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\DocumentWindow.xaml.cs",
+              "RelativeToolTip": "Library\\DocumentWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T15:14:43.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\App.xaml",
+              "RelativeDocumentMoniker": "Library\\App.xaml",
+              "ToolTip": "C:\\Users\\islam\\source\\repos\\RS\\Library\\Library\\App.xaml",
+              "RelativeToolTip": "Library\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-14T10:52:53.749Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

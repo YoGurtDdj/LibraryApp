@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,25 +30,7 @@ namespace Library
 
         private static string GetId(string username)
         {
-            string connStr = "server=localhost;user=root;database=Library;port=3307;password=1234";
-            MySqlConnection conn = new MySqlConnection(connStr);
-            try
-            {
-                conn.Open();
-
-                string sql = "SELECT id FROM users WHERE login = @content";
-
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@content", username);
-                object result = cmd.ExecuteScalar();
-                conn.Close();
-                return result.ToString();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-                return null;
-            }
+            return "lol";
         }
     }
 }

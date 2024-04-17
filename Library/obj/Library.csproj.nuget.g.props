@@ -12,8 +12,7 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\islam\.nuget\packages\" />
   </ItemGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgPdfium_Net_SDK Condition=" '$(PkgPdfium_Net_SDK)' == '' ">C:\Users\islam\.nuget\packages\pdfium.net.sdk\4.87.2704</PkgPdfium_Net_SDK>
-    <PkgMicrosoft_Web_WebView2 Condition=" '$(PkgMicrosoft_Web_WebView2)' == '' ">C:\Users\islam\.nuget\packages\microsoft.web.webview2\1.0.2210.55</PkgMicrosoft_Web_WebView2>
-  </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)pdfiumviewer.native.x86_64.v8-xfa\2018.4.8.256\Build\PdfiumViewer.Native.x86_64.v8-xfa.props" Condition="Exists('$(NuGetPackageRoot)pdfiumviewer.native.x86_64.v8-xfa\2018.4.8.256\Build\PdfiumViewer.Native.x86_64.v8-xfa.props')" />
+  </ImportGroup>
 </Project>

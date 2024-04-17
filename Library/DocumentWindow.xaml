@@ -4,31 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library" 
-        xmlns:Toolbars="clr-namespace:Patagames.Pdf.Net.Controls.Wpf.ToolBars;assembly=Patagames.Pdf.Wpf" 
-        xmlns:Wpf="clr-namespace:Patagames.Pdf.Net.Controls.Wpf;assembly=Patagames.Pdf.Wpf"
+        xmlns:pdf="clr-namespace:PdfiumViewer;assembly=PdfiumViewer"
         mc:Ignorable="d"
         WindowState="Maximized"
         Title="DocumentWindow" Height="1080" Width="1920">
     <Grid>
-        <Grid.LayoutTransform>
-            <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
-        </Grid.LayoutTransform>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="900"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-
-        <ScrollViewer CanContentScroll="True"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="697" VerticalAlignment="Top" HorizontalAlignment="Center" Width="596" Margin="0,108,0,0">
-            <Wpf:PdfViewer x:Name="pdfViewer1" SizeMode="FitToSize" PageHAlign="Center" Width="596"/>
-        </ScrollViewer>
-
-        <ToolBarTray Margin="0,830,0,0" Height="60.2" HorizontalAlignment="Center">
-            <Toolbars:PdfToolBarPages PdfViewer="{Binding ElementName=pdfViewer1}" Foreground="Black"/>
-            <Toolbars:PdfToolBarZoom PdfViewer="{Binding ElementName=pdfViewer1}" />
-            <local:MyToolBar PdfViewer="{Binding ElementName=pdfViewer1}" RenderTransformOrigin="1.026,0.616"/>
-            <Toolbars:PdfToolBarSearch PdfViewer="{Binding ElementName=pdfViewer1}"></Toolbars:PdfToolBarSearch>
-        </ToolBarTray>
-
+        <pdf:PdfRenderer Name="PdfViewer"></pdf:PdfRenderer>
     </Grid>
 </Window>

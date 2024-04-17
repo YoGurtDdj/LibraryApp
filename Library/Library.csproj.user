@@ -10,18 +10,6 @@
     <Compile Update="DocumentWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\AccountView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\NoAccountView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\RegistrationView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\AutorizationView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\BookmarksView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,18 +25,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\AccountView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\NoAccountView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\RegistrationView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\AutorizationView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\BookmarksView.xaml">

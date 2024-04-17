@@ -45,25 +45,13 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "Microsoft.Web.WebView2": {
+            "PdfiumViewer.Native.x86_64.v8-xfa": {
               "target": "Package",
-              "version": "[1.0.2210.55, )"
+              "version": "[2018.4.8.256, )"
             },
-            "MySql.Data": {
+            "PdfiumViewer.WPF": {
               "target": "Package",
-              "version": "[8.2.0, )"
-            },
-            "Pdfium.Net.SDK": {
-              "target": "Package",
-              "version": "[4.87.2704, )"
-            },
-            "System.Drawing.Common": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "System.Speech": {
-              "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[1.0.6, )"
             }
           },
           "imports": [
@@ -85,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -121,17 +121,5 @@
         <DataTemplate DataType="{x:Type viewModel:FavouritesViewModel}">
             <view:FavouritesView/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewModel:RegistrationViewModel}">
-            <view:RegistrationView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type viewModel:AutorizationViewModel}">
-            <view:AutorizationView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type viewModel:AccountViewModel}">
-            <view:AccountView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type viewModel:NoAccountViewModel}">
-            <view:NoAccountView/>
-        </DataTemplate>
     </Application.Resources>
 </Application>

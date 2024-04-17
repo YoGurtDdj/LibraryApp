@@ -15,18 +15,10 @@ namespace Library.ViewModel
         public RelayCommand MyFilesViewCommand { get; set; }
         public RelayCommand BookmarksViewCommand { get; set; }
         public RelayCommand FavouritesViewCommand { get; set; }
-        public RelayCommand RegistrationViewCommand { get; set; }
-        public RelayCommand AutorizationViewCommand { get; set; }
-        public RelayCommand AccountViewCommand { get; set; }
-        public RelayCommand NoAccountViewCommand { get; set; }
 
         public MyFilesViewModel MyFilesVm { get; set; }
         public BookmarksViewModel BookmarksVm { get; set; }
         public FavouritesViewModel FavouritesVm { get; set; }
-        public RegistrationViewModel RegistrationVm { get; set; }
-        public AutorizationViewModel AutorizationVm { get; set; }
-        public AccountViewModel AccountVm { get; set; }
-        public NoAccountViewModel NoAccountVm { get; set; }
 
         private object _currentView;
         public string _currentText;
@@ -34,8 +26,6 @@ namespace Library.ViewModel
         public Brush _myFilesBut = new SolidColorBrush(Colors.White);
         public Brush _bookmarksBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
         public Brush _favourutesBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-        public Brush _accountBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-
 
         public object CurrentView
         {
@@ -81,25 +71,12 @@ namespace Library.ViewModel
                 OnPropertyChanged();
             }
         }
-        public Brush AccountBut
-        {
-            get { return _accountBut; }
-            set
-            {
-                _accountBut = value;
-                OnPropertyChanged();
-            }
-        }
+
         public MainViewModel()
         {
-            User.UserLoggedIn += HandleUserLoggedIn;
             MyFilesVm = new MyFilesViewModel();
             BookmarksVm = new BookmarksViewModel();
             FavouritesVm = new FavouritesViewModel();
-            RegistrationVm = new RegistrationViewModel();
-            AutorizationVm = new AutorizationViewModel();
-            AccountVm = new AccountViewModel();
-            NoAccountVm = new NoAccountViewModel();
             CurrentView = MyFilesVm;
             CurrentText = "My Files";
 
@@ -108,7 +85,6 @@ namespace Library.ViewModel
                 MyFilesBut = new SolidColorBrush(Colors.White);
                 BookmarksBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
                 FavouritesBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                AccountBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
                 CurrentText = "My Files";
                 CurrentView = MyFilesVm;
             });
@@ -117,80 +93,17 @@ namespace Library.ViewModel
                 MyFilesBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
                 BookmarksBut = new SolidColorBrush(Colors.White);
                 FavouritesBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                AccountBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                
-                if (User.IsUserLoggedIn())
-                {
-                    CurrentText = "Bookmarks";
-                    CurrentView = BookmarksVm;
-                }
-                else
-                {
-                    CurrentText = "NoAccount";
-                    CurrentView = NoAccountVm;
-                }
+                CurrentText = "Bookmarks";
+                CurrentView = BookmarksVm;
             });
             FavouritesViewCommand = new RelayCommand(o =>
             {
                 MyFilesBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
                 BookmarksBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
                 FavouritesBut = new SolidColorBrush(Colors.White);
-                AccountBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                if (User.IsUserLoggedIn())
-                {
-                    CurrentText = "Favourites";
-                    CurrentView = FavouritesVm;
-                }
-                else
-                {
-                    CurrentText = "NoAccount";
-                    CurrentView = NoAccountVm;
-                }
+                CurrentText = "Favourites";
+                CurrentView = FavouritesVm;
             });
-            RegistrationViewCommand = new RelayCommand(o =>
-            {
-                MyFilesBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                BookmarksBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                FavouritesBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                AccountBut = new SolidColorBrush(Colors.White);
-                if (User.IsUserLoggedIn())
-                {
-                    CurrentText = "Account";
-                    CurrentView = AccountVm;
-                }
-                else
-                {
-                    CurrentText = "Registration";
-                    CurrentView = RegistrationVm;
-                }
-            });
-            AutorizationViewCommand = new RelayCommand(o =>
-            {
-                MyFilesBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                BookmarksBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                FavouritesBut = new SolidColorBrush(Color.FromRgb(57, 57, 57));
-                AccountBut = new SolidColorBrush(Colors.White);
-                if (User.IsUserLoggedIn())
-                {
-                    CurrentText = "Account";
-                    CurrentView = AccountVm;
-                }
-                else
-                {
-                    CurrentText = "Authorization";
-                    CurrentView = AutorizationVm;
-                }
-
-            });
-
-        }
-        private void HandleUserLoggedIn(object sender, EventArgs e)
-        {
-            if (User.IsUserLoggedIn())
-            {
-                CurrentText = "Account";
-                CurrentView = AccountVm;
-            }
         }
     }
 }
